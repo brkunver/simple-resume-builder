@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply flex flex-col align-middle justify-around bg-gradient-to-b from-blue-100 to-gray-100 border;
+  @apply border-gray-100 text-gray-800 rounded;
+  @apply h-fit my-auto max-w-[480px] min-h-[300px] px-4 py-6;
+}
