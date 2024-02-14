@@ -1,7 +1,7 @@
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer"
 import resumeStore from "@/store"
 
-const MyDocument = () => {
+const Pdf1 = () => {
   const resume = resumeStore((state) => state.resume)
 
   return (
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default MyDocument
+export default Pdf1

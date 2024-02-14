@@ -41,8 +41,8 @@ function StepFourPage({}: Props) {
         <Link to="/create/3">
           <Button>Previous Section</Button>
         </Link>
-        <Link to="/create/5">
-          <Button>Next Section</Button>
+        <Link to="/pdf">
+          <Button>Create PDF!</Button>
         </Link>
       </section>
     </StepCard>
