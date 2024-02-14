@@ -3,13 +3,12 @@ import { Button } from "@/components/UI/button"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import Job from "@/components/Job"
-import resumeStore from "@/store"
 
 function StepThreePage() {
   const [jobCount, setJobCount] = useState({ first: true, second: false, third: false })
 
-  let resume = resumeStore(state => state.resume)
-  console.log(resume)
+
+
   function addNewJobHandler() {
     if (jobCount.second == false) {
       setJobCount((state) => ({ ...state, second: true }))
@@ -39,10 +38,10 @@ function StepThreePage() {
 
       <section id="buttons" className="flex justify-between px-4 mt-6">
         <Link to="/create/2">
-          <Button>Previous Section </Button>
+          <Button>Previous Section</Button>
         </Link>
         <Link to="/create/4">
-          <Button>Next Section </Button>
+          <Button>Next Section</Button>
         </Link>
       </section>
     </StepCard>

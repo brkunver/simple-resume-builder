@@ -1,5 +1,10 @@
 import { create } from "zustand"
 
+type Language = {
+  language?: string
+  level?: "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | string
+}
+
 type Education = {
   degree?: string | null
   city?: string | null
@@ -29,6 +34,7 @@ type TResume = {
   tel?: string | null
   educations: Education[]
   jobs: Job[]
+  languages: Language[]
   photoSrc?: string | null
 }
 
@@ -38,8 +44,8 @@ interface Store {
 }
 
 const resumeStore = create<Store>((set) => ({
-  resume: { educations: [{}, {}, {}], jobs: [{}, {}, {}] },
+  resume: { educations: [{}, {}, {}], jobs: [{}, {}, {}], languages: [{}, {}, {}] },
   setResume: (input) => set({ resume: input }),
 }))
-export type { Education, TResume }
+
 export default resumeStore

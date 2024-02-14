@@ -7,6 +7,7 @@ import About from "./pages/About"
 import StepOnePage from "./pages/FormPages/StepOnePage"
 import StepTwoPage from "./pages/FormPages/StepTwoPage"
 import StepThreePage from "./pages/FormPages/StepThreePage"
+import StepFourPage from "./pages/FormPages/StepFourPage"
 import Error from "./pages/Error"
 
 const router = createBrowserRouter([
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        index: true,
         element: <Index />,
       },
       {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/create/3",
         element: <StepThreePage />,
+      },
+      {
+        path: "/create/4",
+        element: <StepFourPage />,
       },
       {
         path: "/about",
