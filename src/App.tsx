@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         element: <Index />,
       },
       {
+        path: "/pdf",
+        element: <PdfResult />,
+      },
+      {
         path: "/create/1",
         element: <StepOnePage />,
       },
@@ -38,10 +42,7 @@ const router = createBrowserRouter([
         path: "/create/4",
         element: <StepFourPage />,
       },
-      {
-        path: "/pdf",
-        element: <PdfResult />,
-      },
+
       {
         path: "/about",
         element: <About />,
