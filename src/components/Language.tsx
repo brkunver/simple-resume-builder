@@ -28,7 +28,6 @@ function Language({ index, className, showline = true }: Props) {
     setResume(resumeCopy)
   }
 
-  console.log(resume.languages)
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -57,10 +56,13 @@ function Language({ index, className, showline = true }: Props) {
           onChange={(e) => handleInput(e)}
         />
         <Label htmlFor="level" className={cn("min-w-32 my-auto")}>
-          Level :
+          Select Level :
         </Label>
 
-        <Select onValueChange={(value) => languageLevelHandler(value)}>
+        <Select
+          value={resume.languages[index].level ?? undefined}
+          onValueChange={(value) => languageLevelHandler(value)}
+        >
           <SelectTrigger className="bg-gray-50">
             <SelectValue placeholder="e.g. A1" />
           </SelectTrigger>
@@ -73,17 +75,6 @@ function Language({ index, className, showline = true }: Props) {
             <SelectItem value="C2">C2</SelectItem>
           </SelectContent>
         </Select>
-
-        {/* {<Input
-          type="text"
-          name="level"
-          id="level"
-          maxLength={24}
-          className={cn("bg-gray-50")}
-          placeholder="e.g. C1"
-          value={resume.jobs[index].city ?? ""}
-          onChange={(e) => handleInput(e)}
-        />} */}
       </section>
     </motion.div>
   )

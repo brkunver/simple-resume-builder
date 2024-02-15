@@ -1,17 +1,20 @@
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer"
-import resumeStore from "@/store"
+import { Page, Text, View, Document, Image } from "@react-pdf/renderer"
+import logo from "@/assets/user.png"
+import type { TResume } from "@/store"
+type Props = {
+  resume: TResume
+}
 
-const Pdf1 = () => {
-  const resume = resumeStore((state) => state.resume)
-
+const Pdf1 = ({ resume }: Props) => {
   return (
     <Document>
-      <Page size="A4" style={styles.page}>
-        <View style={styles.section}>
-          <Text>{resume.firstName}</Text>
-        </View>
-        <View style={styles.section}>
-          <Text>{resume.lastName}</Text>
+      <Page size="A4" style={{ flexDirection: "column", backgroundColor: "white", width: "full" }}>
+        <View id="Top Section" style={{ flexDirection: "row" }}>
+          <Image
+            src={(resume.photoSrc as unknown as Buffer) ?? logo}
+            style={{ width: 64, height: 64, borderRadius: "100%", objectFit: "cover" }}
+          ></Image>
+          <Text>{resume.firstName || "<Your-Name>"}</Text>
         </View>
       </Page>
     </Document>
@@ -19,19 +22,5 @@ const Pdf1 = () => {
 }
 
 // Create styles
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: "row",
-    justifyContent: "center",
-    backgroundColor: "white",
-    width: 600,
-  },
-  section: {
-    width: 200,
-    margin: 10,
-    padding: 10,
-    flexGrow: 1,
-  },
-})
 
 export default Pdf1

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition-colors;
+}
+
 .card {
   @apply flex flex-col align-middle justify-around bg-gradient-to-b from-blue-100 to-gray-100 border;
   @apply border-gray-100 text-gray-800 rounded;

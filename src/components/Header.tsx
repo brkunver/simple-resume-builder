@@ -11,15 +11,21 @@ function Header({}: Props) {
         <img src={siteLogo} alt="logo" className="h-12"></img>
         <h2 className="my-auto text-xl">Resume Builder</h2>
       </Link>
-      <ul id="menu" className="hidden lg:flex gap-x-6 my-auto text-white">
+      <ul id="menu" className="hidden lg:flex gap-x-6 my-auto text-white ">
         <li>
-          <Link to="/">Home</Link>
+          <Link className="hover:text-gray-200 hover:underline hover:underline-offset-2" to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link className="hover:text-gray-200 hover:underline hover:underline-offset-2" to="/about">
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/errrr">Error!</Link>
+          <Link className="hover:text-gray-200 hover:underline hover:underline-offset-2" to="/errrr">
+            Error!
+          </Link>
         </li>
       </ul>
     </motion.header>
