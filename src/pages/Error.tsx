@@ -9,7 +9,6 @@ function Error() {
       <Header />
       <StepCard className="min-h-[500px] justify-center">
         <h1 className="text-5xl font-bold">Page Not Found</h1>
-
         <Link className="max-w-[500px] mx-auto" to="/">
           <Button>Go Home</Button>
         </Link>

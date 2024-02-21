@@ -1,4 +1,5 @@
-import { Label } from "@radix-ui/react-label"
+import { Label } from "./UI/label"
+import { Switch } from "./UI/switch"
 import { Input } from "./UI/input"
 import { cn } from "@/lib/utils"
 import resumeStore from "@/store"
@@ -28,6 +29,12 @@ function Language({ index, className, showline = true }: Props) {
     setResume(resumeCopy)
   }
 
+  function handleSwitchChange(checked: boolean) {
+    let resumeCopy = { ...resume }
+    resumeCopy.languages[index].isShow = checked
+    setResume(resumeCopy)
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,6 +49,19 @@ function Language({ index, className, showline = true }: Props) {
         id="language-section"
         className="flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-center align-middle gap-x-6 "
       >
+        <section className="flex place-content-center">
+          <Label htmlFor="addCV" className={cn("min-w-20 my-auto")}>
+            Add to CV
+          </Label>
+          <Switch
+            className="my-auto"
+            id="addCV"
+            name="addCV"
+            checked={resume.languages[index].isShow}
+            onCheckedChange={handleSwitchChange}
+          />
+        </section>
+
         <Label htmlFor="language" className={cn("min-w-32 my-auto")}>
           Language :
         </Label>

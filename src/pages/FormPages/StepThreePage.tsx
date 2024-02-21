@@ -7,8 +7,6 @@ import Job from "@/components/Job"
 function StepThreePage() {
   const [jobCount, setJobCount] = useState({ first: true, second: false, third: false })
 
-
-
   function addNewJobHandler() {
     if (jobCount.second == false) {
       setJobCount((state) => ({ ...state, second: true }))

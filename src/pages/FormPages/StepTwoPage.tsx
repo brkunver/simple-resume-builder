@@ -7,6 +7,7 @@ import { useState } from "react"
 function StepTwoPage() {
   const [educationCount, setEducationCount] = useState({ first: true, second: false, third: false })
 
+
   function addNewEducationHandler() {
     if (educationCount.second == false) {
       setEducationCount((state) => ({ ...state, second: true }))

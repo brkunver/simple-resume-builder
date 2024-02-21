@@ -1,4 +1,5 @@
-import { Label } from "@radix-ui/react-label"
+import { Label } from "./UI/label"
+import { Switch } from "@/components/UI/switch"
 import { Input } from "./UI/input"
 import { cn } from "@/lib/utils"
 import resumeStore from "@/store"
@@ -45,6 +46,12 @@ function Job({ index, className, showline = true }: Props) {
     setResume(resumeCopy)
   }
 
+  function handleSwitchChange(checked: boolean) {
+    let resumeCopy = { ...resume }
+    resumeCopy.jobs[index].isShow = checked
+    setResume(resumeCopy)
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -59,6 +66,19 @@ function Job({ index, className, showline = true }: Props) {
         id="job-title-city-section"
         className="flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-center align-middle gap-x-6 "
       >
+        <section className="flex place-content-center">
+          <Label htmlFor="addCV" className={cn("min-w-20 my-auto")}>
+            Add to CV
+          </Label>
+          <Switch
+            className="my-auto"
+            id="addCV"
+            name="addCV"
+            checked={resume.jobs[index].isShow}
+            onCheckedChange={handleSwitchChange}
+          />
+        </section>
+
         <Label htmlFor="title" className={cn("min-w-32 my-auto")}>
           Title :
         </Label>

@@ -17,7 +17,6 @@ function PdfResult({}: Props) {
       >
         {"<= Go to last section"}
       </Link>
-
       <div className="max-w-[300px] py-2 px-4 mx-auto grid place-content-center font-bold text-lg bg-indigo-600 hover:bg-indigo-800 text-gray-50 rounded">
         <PDFDownloadLink style={{ textAlign: "center" }} document={<Pdf1 resume={resume} />} fileName="resume.pdf">
           {({ loading, error }) => (error ? "Error, try again later" : loading ? "Creating PDF..." : "Download PDF")}

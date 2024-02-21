@@ -1,11 +1,13 @@
 import { create } from "zustand"
 
 type Language = {
+  isShow: boolean
   language?: string
   level?: "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | string
 }
 
 type Education = {
+  isShow: boolean
   degree?: string | null
   city?: string | null
   isExist?: boolean | null
@@ -17,6 +19,7 @@ type Education = {
 }
 
 type Job = {
+  isShow: boolean
   title?: string
   city?: string
   company?: string
@@ -44,7 +47,11 @@ interface Store {
 }
 
 const resumeStore = create<Store>((set) => ({
-  resume: { educations: [{}, {}, {}], jobs: [{}, {}, {}], languages: [{}, {}, {}] },
+  resume: {
+    educations: [{ isShow: true }, { isShow: false }, { isShow: false }],
+    jobs: [{ isShow: true }, { isShow: false }, { isShow: false }],
+    languages: [{ isShow: true }, { isShow: false }, { isShow: false }],
+  },
   setResume: (input) => set({ resume: input }),
 }))
 export type { TResume }
