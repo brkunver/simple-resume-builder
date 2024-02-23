@@ -30,6 +30,7 @@ type Job = {
 }
 
 type TResume = {
+  title?: string | null
   firstName?: string | null
   lastName?: string | null
   about?: string | null

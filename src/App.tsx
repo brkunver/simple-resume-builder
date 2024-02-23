@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 
-import Root from "./components/Root"
+import Root from "./layouts/Root"
 import Index from "./pages/Index"
 import About from "./pages/About"
 import StepOnePage from "./pages/FormPages/StepOnePage"

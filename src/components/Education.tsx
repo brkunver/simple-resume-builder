@@ -14,8 +14,6 @@ type Props = {
 function Education({ index, className, showline = true }: Props) {
   const { resume, setResume } = resumeStore()
 
-  console.log(resume.educations)
-
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
     let resumeCopy = { ...resume }
     const input = e.target.value

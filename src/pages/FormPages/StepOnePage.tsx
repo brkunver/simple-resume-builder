@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import uploadLogo from "@/assets/uploadLogo.png"
 import resumeStore from "@/store"
 import { useNavigate } from "react-router-dom"
-import { cn } from "@/lib/utils"
 
+import { cn } from "@/lib/utils"
 import { Label } from "@/components/UI/label"
 import { Input } from "@/components/UI/input"
 import { Button } from "@/components/UI/button"
@@ -11,13 +11,13 @@ import { Textarea } from "@/components/UI/textarea"
 
 import StepCard from "@/layouts/StepCard"
 
-type Props = {}
-
-function StepOnePage({}: Props) {
+function StepOnePage() {
   const { resume, setResume } = resumeStore()
   const [isPhotoSelected, setIsPhotoSelected] = useState(resume.photoSrc ? true : false)
   const [imageSrc, setImageSrc] = useState<string>(resume.photoSrc ?? uploadLogo)
   let navigate = useNavigate()
+
+  console.log(resume)
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -50,6 +50,9 @@ function StepOnePage({}: Props) {
       case "tel":
         resumeCopy.tel = value
         break
+      case "current-title":
+        resumeCopy.title = value
+        break
       default:
         break
     }
@@ -81,6 +84,21 @@ function StepOnePage({}: Props) {
             style={{ display: "none" }}
           />
         </div>
+      </section>
+
+      <section id="your-title" className=" flex flex-col gap-y-2 my-4">
+        <Label htmlFor="current-title" className="text-xl">
+          Your Title
+        </Label>
+        <Input
+          className="max-w-[350px] mx-auto"
+          id="current-title"
+          name="current-title"
+          type="text"
+          maxLength={30}
+          onChange={handleInputChange}
+          placeholder="e.g. Software Developer"
+        />
       </section>
       <section id="about-section" className="flex flex-col content-center">
         <h2 className="text-lg font-semibold text-center mb-4">Tell about yourself</h2>
