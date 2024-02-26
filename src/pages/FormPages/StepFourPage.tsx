@@ -14,7 +14,7 @@ function StepFourPage({}: Props) {
       setLanguageCount((state) => ({ ...state, second: true }))
     } else if (languageCount.second == true && languageCount.third == false) {
       setLanguageCount((state) => ({ ...state, third: true }))
-    } else {
+    } else  {
       return
     }
   }
@@ -41,8 +41,8 @@ function StepFourPage({}: Props) {
         <Link to="/create/3">
           <Button>Previous Section</Button>
         </Link>
-        <Link to="/pdf">
-          <Button>Create PDF!</Button>
+        <Link to="/create/5">
+          <Button>Next Section</Button>
         </Link>
       </section>
     </StepCard>

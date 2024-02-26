@@ -107,7 +107,7 @@ function StepOnePage() {
           id="about"
           maxLength={200}
           placeholder="About me..."
-          className="bg-gray-50 max-w-[600px] mx-auto"
+          className="bg-gray-50 max-w-[600px] max-h-[400px] mx-auto"
         ></Textarea>
       </section>
       <section

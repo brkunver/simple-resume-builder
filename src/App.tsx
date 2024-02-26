@@ -8,6 +8,7 @@ import StepOnePage from "./pages/FormPages/StepOnePage"
 import StepTwoPage from "./pages/FormPages/StepTwoPage"
 import StepThreePage from "./pages/FormPages/StepThreePage"
 import StepFourPage from "./pages/FormPages/StepFourPage"
+import StepFivePage from "./pages/FormPages/StepFivePage"
 import PdfResult from "./pages/PdfResult"
 import Error from "./pages/Error"
 
@@ -42,7 +43,10 @@ const router = createBrowserRouter([
         path: "/create/4",
         element: <StepFourPage />,
       },
-
+      {
+        path: "/create/5",
+        element: <StepFivePage />,
+      },
       {
         path: "/about",
         element: <About />,

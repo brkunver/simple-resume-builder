@@ -10,7 +10,7 @@ type Education = {
   isShow: boolean
   degree?: string | null
   city?: string | null
-  isExist?: boolean | null
+
   schoolName?: string | null
   startMonth?: string | number
   startYear?: string | number
@@ -21,12 +21,17 @@ type Education = {
 type Job = {
   isShow: boolean
   title?: string
+  description?: string
   city?: string
   company?: string
   startMonth?: string | number
   startYear?: string | number
   endMonth?: string | number
   endYear?: string | number
+}
+type Skill = {
+  isShow: boolean
+  name?: string
 }
 
 type TResume = {
@@ -39,6 +44,7 @@ type TResume = {
   educations: Education[]
   jobs: Job[]
   languages: Language[]
+  skills: Skill[]
   photoSrc?: string | null
 }
 
@@ -49,6 +55,7 @@ interface Store {
 
 const resumeStore = create<Store>((set) => ({
   resume: {
+    skills: [{ isShow: true }, { isShow: false }, { isShow: false }, { isShow: false }, { isShow: false }],
     educations: [{ isShow: true }, { isShow: false }, { isShow: false }],
     jobs: [{ isShow: true }, { isShow: false }, { isShow: false }],
     languages: [{ isShow: true }, { isShow: false }, { isShow: false }],
