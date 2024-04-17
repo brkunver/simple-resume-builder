@@ -10,12 +10,7 @@ import StepThreePage from "./pages/FormPages/StepThreePage"
 import StepFourPage from "./pages/FormPages/StepFourPage"
 import StepFivePage from "./pages/FormPages/StepFivePage"
 import PdfResult from "./pages/PdfResult"
-import React from "react"
-
-import { ComponentType } from "react"
-
-const Error = React.lazy<ComponentType<any>>(() => import("./pages/Error"))
-
+import Error from "./pages/Error"
 const router = createBrowserRouter([
   {
     path: "/",
