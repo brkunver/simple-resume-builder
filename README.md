@@ -6,4 +6,4 @@
 
 - https://free-cv-build.netlify.app/
 
-- Built with technologies : React - R.Router - Zustand - Tailwindcss - Shadcn UI - Framer Motion
+- Built with technologies : React - React.Router - Zustand - Tailwindcss - Shadcn UI - Framer Motion
