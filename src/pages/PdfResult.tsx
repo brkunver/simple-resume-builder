@@ -1,11 +1,23 @@
-//import resumeStore from "@/store"
+import resumeStore from "@/store"
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer"
 import Pdf1 from "@/components/Pdf1"
 import { Link } from "react-router-dom"
 import { mockResume } from "@/lib/mockResumeData"
+import { PDFTemplate } from "@/lib/types"
 
 function PdfResult() {
+  const { selectedTemplate } = resumeStore()
   const tempResume = mockResume
+
+  let document = <Pdf1 resume={tempResume}></Pdf1>
+
+  switch (selectedTemplate) {
+    case PDFTemplate.PDF1:
+      document = <Pdf1 resume={tempResume}></Pdf1>
+      break
+    default:
+      break
+  }
 
   return (
     <div className="flex flex-col justify-center gap-y-8 my-12">
@@ -17,7 +29,7 @@ function PdfResult() {
         {"<= Go to last section"}
       </Link>
       <div className="max-w-[300px] py-2 px-4 mx-auto grid place-content-center font-bold text-lg bg-indigo-600 hover:bg-indigo-800 text-gray-50 rounded">
-        <PDFDownloadLink style={{ textAlign: "center" }} document={<Pdf1 resume={tempResume} />} fileName="resume.pdf">
+        <PDFDownloadLink style={{ textAlign: "center" }} document={document} fileName="resume.pdf">
           {({ loading, error }) => (error ? "Error, try again later" : loading ? "Creating PDF..." : "Download PDF")}
         </PDFDownloadLink>
       </div>
@@ -26,7 +38,7 @@ function PdfResult() {
         <span className="underline, font-semibold"> but you can still download it</span>
       </p>
       <PDFViewer showToolbar={false} className="hidden lg:block w-[1000px] h-[800px] mx-auto ">
-        <Pdf1 resume={tempResume}></Pdf1>
+        {document}
       </PDFViewer>
     </div>
   )

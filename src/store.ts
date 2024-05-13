@@ -1,9 +1,12 @@
 import { create } from "zustand"
 import type { TResume } from "./lib/types"
+import { PDFTemplate } from "./lib/types"
 
 interface Store {
   resume: TResume
   setResume: (input: TResume) => void
+  selectedTemplate: PDFTemplate
+  setSelectedTemplate: (input: PDFTemplate) => void
 }
 
 const resumeStore = create<Store>((set) => ({
@@ -14,6 +17,8 @@ const resumeStore = create<Store>((set) => ({
     languages: [{ isShow: true }, { isShow: false }, { isShow: false }],
   },
   setResume: (input) => set({ resume: input }),
+  selectedTemplate : PDFTemplate.PDF1,
+  setSelectedTemplate: (input) => set({ selectedTemplate: input })
 }))
 
 

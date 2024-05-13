@@ -45,3 +45,8 @@ export type TResume = {
   skills: Skill[]
   photoSrc?: string | null
 }
+
+export enum PDFTemplate {
+  PDF1,
+  PDF2,
+}
