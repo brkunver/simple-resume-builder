@@ -17,8 +17,6 @@ function StepOnePage() {
   const [imageSrc, setImageSrc] = useState<string>(resume.photoSrc ?? uploadLogo)
   let navigate = useNavigate()
 
-  console.log(resume)
-
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0]
