@@ -16,7 +16,7 @@ const Pdf1 = ({ resume }: Props) => {
     <Document>
       <Page size="A4" style={{ flexDirection: "row", backgroundColor: "white", width: "full" }}>
         <View
-          id="left section"
+          id="left-section"
           style={{
             flexDirection: "column",
             backgroundColor: "#2c3e50",
@@ -89,7 +89,7 @@ const Pdf1 = ({ resume }: Props) => {
         </View>
 
         <View
-          id="right section"
+          id="right-section"
           style={{ flexDirection: "column", flex: 3, backgroundColor: "white", color: "#2c3e50" }}
         ></View>
       </Page>
