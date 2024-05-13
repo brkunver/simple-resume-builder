@@ -62,5 +62,6 @@ const resumeStore = create<Store>((set) => ({
   },
   setResume: (input) => set({ resume: input }),
 }))
+
 export type { TResume }
 export default resumeStore
