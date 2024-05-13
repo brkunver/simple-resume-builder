@@ -1,6 +1,6 @@
 import { Page, Text, View, Document, Image, Font } from "@react-pdf/renderer"
 import logo from "@/assets/user.png"
-import type { TResume } from "@/store"
+import type { TResume } from "@/lib/types"
 
 type Props = {
   resume: TResume
@@ -96,7 +96,5 @@ const Pdf1 = ({ resume }: Props) => {
     </Document>
   )
 }
-
-// Create styles
 
 export default Pdf1
