@@ -21,5 +21,4 @@ const resumeStore = create<Store>((set) => ({
   setSelectedTemplate: (input) => set({ selectedTemplate: input })
 }))
 
-
 export default resumeStore

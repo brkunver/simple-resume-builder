@@ -6,6 +6,7 @@ type Props = {
   children: ReactNode
   className?: string
 }
+
 function StepCard({ children, className }: Props) {
   return (
     <motion.main

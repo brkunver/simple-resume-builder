@@ -27,6 +27,7 @@ export type Job = {
   endMonth?: string | number
   endYear?: string | number
 }
+
 export type Skill = {
   isShow: boolean
   name?: string
