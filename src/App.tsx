@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
+import { lazy } from "react"
 
 import Root from "./layouts/Root"
 import Index from "./pages/Index"
@@ -9,13 +10,14 @@ import StepTwoPage from "./pages/FormPages/StepTwoPage"
 import StepThreePage from "./pages/FormPages/StepThreePage"
 import StepFourPage from "./pages/FormPages/StepFourPage"
 import StepFivePage from "./pages/FormPages/StepFivePage"
-import PdfResult from "./pages/PdfResult"
-import Error from "./pages/Error"
+import PdfResultPage from "./pages/PdfResult"
+const ErrorPage = lazy(() => import("./pages/Error"))
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/pdf",
-        element: <PdfResult />,
+        element: <PdfResultPage />,
       },
       {
         path: "/create/1",
