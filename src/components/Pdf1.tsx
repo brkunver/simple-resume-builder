@@ -1,4 +1,4 @@
-import { Page, Text, View, Document, Image } from "@react-pdf/renderer"
+import { Page, Text, View, Document, Image, Font } from "@react-pdf/renderer"
 import logo from "@/assets/user.png"
 import type { TResume } from "@/store"
 
@@ -6,8 +6,12 @@ type Props = {
   resume: TResume
 }
 
+Font.register({
+  family: "Roboto",
+  src: "./fonts/Roboto-regular.ttf",
+})
+
 const Pdf1 = ({ resume }: Props) => {
-  console.log("Pdf1 => ", resume)
   return (
     <Document>
       <Page size="A4" style={{ flexDirection: "row", backgroundColor: "white", width: "full" }}>
@@ -33,7 +37,7 @@ const Pdf1 = ({ resume }: Props) => {
               marginRight: "auto",
             }}
           ></Image>
-          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Contact</Text>
+          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20, fontFamily: "Roboto" }}>Contact</Text>
           <View
             id="line1"
             style={{
@@ -52,6 +56,7 @@ const Pdf1 = ({ resume }: Props) => {
               color: "#ccc",
               marginTop: 8,
               marginBottom: 4,
+              fontFamily: "Roboto",
             }}
           >
             Email
