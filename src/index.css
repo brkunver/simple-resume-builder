@@ -4,6 +4,7 @@
 
 * {
   @apply transition-colors;
+  font-family: "Roboto", sans-serif;
 }
 
 .card {
