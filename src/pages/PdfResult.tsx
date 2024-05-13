@@ -1,11 +1,10 @@
+//import resumeStore from "@/store"
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer"
 import Pdf1 from "@/components/Pdf1"
-import resumeStore from "@/store"
 import { Link } from "react-router-dom"
 import { mockResume } from "@/lib/mockResumeData"
 
 function PdfResult() {
-
   const tempResume = mockResume
 
   return (
