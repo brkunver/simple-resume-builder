@@ -1,4 +1,4 @@
-import type { TResume } from "@/store"
+import type { TResume } from "@/lib/types"
 
 export const mockResume: TResume = {
   skills: [
