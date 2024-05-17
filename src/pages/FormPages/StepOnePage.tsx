@@ -85,7 +85,7 @@ function StepOnePage() {
       </section>
 
       <section id="your-title" className=" flex flex-col gap-y-2 my-4">
-        <Label htmlFor="current-title" className="text-xl">
+        <Label htmlFor="current-title" className="text-xl" title="title">
           Your Title
         </Label>
         <Input
@@ -119,6 +119,7 @@ function StepOnePage() {
           type="text"
           name="first-name"
           id="first-name"
+          title="first name"
           maxLength={50}
           value={resume.firstName ?? ""}
           onChange={(e) => handleInputChange(e)}
@@ -132,6 +133,7 @@ function StepOnePage() {
           type="text"
           name="last-name"
           id="last-name"
+          title="last name"
           maxLength={50}
           value={resume.lastName ?? ""}
           onChange={(e) => handleInputChange(e)}
@@ -151,6 +153,7 @@ function StepOnePage() {
           maxLength={50}
           name="email"
           id="email"
+          title="email"
           value={resume.email ?? ""}
           onChange={(e) => handleInputChange(e)}
           className={cn("bg-gray-50")}
@@ -162,6 +165,7 @@ function StepOnePage() {
         <Input
           type="tel"
           maxLength={20}
+          title="tel"
           name="tel"
           id="tel"
           value={resume.tel ?? ""}

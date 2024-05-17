@@ -36,7 +36,7 @@ function Skill({ index, showline = true }: Props) {
       {showline && <div className="w-full h-[1px] bg-indigo-400 rounded-lg my-8"></div>}
 
       <section
-        id="language-section"
+        id="skills-section"
         className="flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-center align-middle gap-x-6 "
       >
         <section className="flex place-content-center">
@@ -52,13 +52,14 @@ function Skill({ index, showline = true }: Props) {
           />
         </section>
 
-        <Label htmlFor="language" className={"min-w-32 my-auto"}>
+        <Label htmlFor="skill" className={"min-w-32 my-auto"}>
           Skill name
         </Label>
         <Input
           type="text"
-          name="language"
-          id="language"
+          name="skill"
+          id="skill"
+          title="skill"
           maxLength={24}
           className={"bg-gray-50"}
           placeholder="e.g. Javascript"
