@@ -14,8 +14,8 @@ function Index({}: Props) {
       transition={{ duration: 0.5 }}
     >
       <section className="flex flex-col lg:flex-row justify-center mx-auto align-middle mt-10">
-        <div id="first-section " className="card">
-          <h2 className="text-2xl font-bold text-center">Create Beautiful Resumes</h2>
+        <div id="first-section" className="card">
+          <h2 className="text-2xl font-bold text-center">Create Beautiful Resumes - <span className="italic underline text-purple-900">Currently In Development Mode</span></h2>
           <p className="text-lg font-semibold text-gray-800">
             Create your professional resume in minutes! Our free platform allows you to easily input your information
             and download your CV as a{" "}
