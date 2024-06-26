@@ -22,11 +22,6 @@ function Header({}: Props) {
             About
           </Link>
         </li>
-        <li>
-          <Link className="hover:text-gray-200 hover:underline hover:underline-offset-2" to="/errrr">
-            Error!
-          </Link>
-        </li>
       </ul>
     </motion.header>
   )
