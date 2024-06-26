@@ -47,7 +47,7 @@ function Education({ index, className, showline = true }: Props) {
   }
 
   function handleSwitchChange(checked: boolean) {
-    let resumeCopy = { ...resume }
+    const resumeCopy = { ...resume }
     resumeCopy.educations[index].isShow = checked
     setResume(resumeCopy)
   }
