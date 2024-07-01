@@ -1,7 +1,7 @@
 import { Page, Text, View, Document, Image, Font } from "@react-pdf/renderer"
 import Line from "./Components/Line"
-import logo from "@/assets/user.png"
 import type { TResume } from "@/lib/types"
+import ProfileImage from "./Components/ProfileImage"
 
 type Props = {
   resume: TResume
@@ -27,17 +27,7 @@ const Pdf1 = ({ resume }: Props) => {
             paddingTop: 6,
           }}
         >
-          <Image
-            src={(resume.photoSrc as unknown as Buffer) ?? logo}
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: "100%",
-              objectFit: "cover",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          ></Image>
+          <ProfileImage resume={resume} />
           <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20, fontFamily: "Roboto" }}>Contact</Text>
           <Line />
           <Text
