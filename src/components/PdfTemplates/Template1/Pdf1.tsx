@@ -1,4 +1,5 @@
 import { Page, Text, View, Document, Image, Font } from "@react-pdf/renderer"
+import Line from "./Components/Line"
 import logo from "@/assets/user.png"
 import type { TResume } from "@/lib/types"
 
@@ -38,17 +39,7 @@ const Pdf1 = ({ resume }: Props) => {
             }}
           ></Image>
           <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20, fontFamily: "Roboto" }}>Contact</Text>
-          <View
-            id="line1"
-            style={{
-              width: 80,
-              height: 2,
-              backgroundColor: "#dfe6e9",
-              borderRadius: 1,
-              marginHorizontal: "auto",
-              marginVertical: 4,
-            }}
-          ></View>
+          <Line />
           <Text
             style={{
               textAlign: "center",
@@ -75,17 +66,7 @@ const Pdf1 = ({ resume }: Props) => {
           </Text>
           <Text style={{ textAlign: "center", fontSize: 10, color: "white" }}>{resume.tel}</Text>
           <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Education</Text>
-          <View
-            id="line1"
-            style={{
-              width: 80,
-              height: 2,
-              backgroundColor: "#dfe6e9",
-              borderRadius: 1,
-              marginHorizontal: "auto",
-              marginVertical: 4,
-            }}
-          />
+          <Line />
           <View style={{ marginTop: 8, textAlign: "center" }}>
             {resume.educations.map((education, index) => {
               return (
@@ -101,17 +82,7 @@ const Pdf1 = ({ resume }: Props) => {
             })}
           </View>
           <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Skills</Text>
-          <View
-            id="line1"
-            style={{
-              width: 80,
-              height: 2,
-              backgroundColor: "#dfe6e9",
-              borderRadius: 1,
-              marginHorizontal: "auto",
-              marginVertical: 4,
-            }}
-          />
+          <Line />
           <View style={{ marginTop: 8, textAlign: "center" }}>
             {resume.skills.map((skill, index) => {
               if (skill.isShow) {
