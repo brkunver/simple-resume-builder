@@ -8,7 +8,6 @@ import SkillsSection from "./Components/SkillsSection"
 type Props = {
   resume: TResume
 }
- 
 
 Font.register({
   family: "Roboto",
