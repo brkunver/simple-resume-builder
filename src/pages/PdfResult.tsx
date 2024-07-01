@@ -1,6 +1,6 @@
 import resumeStore from "@/store"
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer"
-import Pdf1 from "@/components/Pdf1"
+import Pdf1 from "@/components/PdfTemplates/Template1/Pdf1"
 import { Link } from "react-router-dom"
 import { mockResume } from "@/lib/mockResumeData"
 import { PDFTemplate } from "@/lib/types"
