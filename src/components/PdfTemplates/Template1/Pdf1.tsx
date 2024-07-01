@@ -1,5 +1,4 @@
-import { Page, Text, View, Document, Font } from "@react-pdf/renderer"
-import Line from "./Components/Line"
+import { Page, View, Document, Font } from "@react-pdf/renderer"
 import type { TResume } from "@/lib/types"
 import ProfileImage from "./Components/ProfileImage"
 import ContactSection from "./Components/ContactSection"
