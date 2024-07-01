@@ -86,7 +86,7 @@ const Pdf1 = ({ resume }: Props) => {
               marginVertical: 4,
             }}
           />
-          <View style={{ marginTop: 8 , textAlign : "center"}}>
+          <View style={{ marginTop: 8, textAlign: "center" }}>
             {resume.educations.map((education, index) => {
               return (
                 <View key={index} style={{ marginBottom: 8 }}>
@@ -98,6 +98,30 @@ const Pdf1 = ({ resume }: Props) => {
                   <Text style={{ fontSize: 10, color: "white" }}>{education.degree}</Text>
                 </View>
               )
+            })}
+          </View>
+          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Skills</Text>
+          <View
+            id="line1"
+            style={{
+              width: 80,
+              height: 2,
+              backgroundColor: "#dfe6e9",
+              borderRadius: 1,
+              marginHorizontal: "auto",
+              marginVertical: 4,
+            }}
+          />
+          <View style={{ marginTop: 8, textAlign: "center" }}>
+            {resume.skills.map((skill, index) => {
+              if (skill.isShow) {
+                return (
+                  <Text key={index} style={{ fontSize: 12, color: "white", marginBottom: 8 }}>
+                    {skill.name}
+                  </Text>
+                )
+              }
+              return null
             })}
           </View>
         </View>
