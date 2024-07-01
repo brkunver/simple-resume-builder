@@ -2,6 +2,9 @@ import { Page, Text, View, Document, Font } from "@react-pdf/renderer"
 import Line from "./Components/Line"
 import type { TResume } from "@/lib/types"
 import ProfileImage from "./Components/ProfileImage"
+import ContactSection from "./Components/ContactSection"
+import EducationSection from "./Components/EducationSection"
+import SkillsSection from "./Components/SkillsSection"
 
 type Props = {
   resume: TResume
@@ -28,63 +31,9 @@ const Pdf1 = ({ resume }: Props) => {
           }}
         >
           <ProfileImage resume={resume} />
-          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20, fontFamily: "Roboto" }}>Contact</Text>
-          <Line />
-          <Text
-            style={{
-              textAlign: "center",
-              fontSize: 12,
-              color: "#ccc",
-              marginTop: 8,
-              marginBottom: 4,
-              fontFamily: "Roboto",
-            }}
-          >
-            Email
-          </Text>
-          <Text style={{ textAlign: "center", fontSize: 10, color: "white" }}>{resume.email}</Text>
-          <Text
-            style={{
-              textAlign: "center",
-              fontSize: 12,
-              color: "#ccc",
-              marginBottom: 2,
-              marginTop: 8,
-            }}
-          >
-            Phone
-          </Text>
-          <Text style={{ textAlign: "center", fontSize: 10, color: "white" }}>{resume.tel}</Text>
-          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Education</Text>
-          <Line />
-          <View style={{ marginTop: 8, textAlign: "center" }}>
-            {resume.educations.map((education, index) => {
-              return (
-                <View key={index} style={{ marginBottom: 8 }}>
-                  <Text style={{ fontSize: 12, color: "#ccc" }}>
-                    {education.startMonth} {education.startYear} - {education.endMonth} {education.endYear}
-                  </Text>
-                  <Text style={{ fontSize: 10, color: "white" }}>{education.schoolName}</Text>
-                  <Text style={{ fontSize: 10, color: "white" }}>{education.city}</Text>
-                  <Text style={{ fontSize: 10, color: "white" }}>{education.degree}</Text>
-                </View>
-              )
-            })}
-          </View>
-          <Text style={{ fontSize: 16, textAlign: "center", marginTop: 20 }}>Skills</Text>
-          <Line />
-          <View style={{ marginTop: 8, textAlign: "center" }}>
-            {resume.skills.map((skill, index) => {
-              if (skill.isShow) {
-                return (
-                  <Text key={index} style={{ fontSize: 12, color: "white", marginBottom: 8 }}>
-                    {skill.name}
-                  </Text>
-                )
-              }
-              return null
-            })}
-          </View>
+          <ContactSection resume={resume} />
+          <EducationSection resume={resume} />
+          <SkillsSection resume={resume} />
         </View>
 
         <View
