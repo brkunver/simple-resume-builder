@@ -86,16 +86,20 @@ const Pdf1 = ({ resume }: Props) => {
               marginVertical: 4,
             }}
           />
-          {resume.educations.map((education, index) => { 
-            return (
-              <View key={index} style={{ marginBottom: 8 }}>
-                <Text style={{ fontSize: 12, color: "#ccc" }}>{education.startMonth} {education.startYear} - {education.endMonth} {education.endYear}</Text>
-                <Text style={{ fontSize: 10, color: "white" }}>{education.schoolName}</Text>
-                <Text style={{ fontSize: 10, color: "white" }}>{education.city}</Text>
-                <Text style={{ fontSize: 10, color: "white" }}>{education.degree}</Text>
-              </View>
-            )
-          })}
+          <View style={{ marginTop: 8 , textAlign : "center"}}>
+            {resume.educations.map((education, index) => {
+              return (
+                <View key={index} style={{ marginBottom: 8 }}>
+                  <Text style={{ fontSize: 12, color: "#ccc" }}>
+                    {education.startMonth} {education.startYear} - {education.endMonth} {education.endYear}
+                  </Text>
+                  <Text style={{ fontSize: 10, color: "white" }}>{education.schoolName}</Text>
+                  <Text style={{ fontSize: 10, color: "white" }}>{education.city}</Text>
+                  <Text style={{ fontSize: 10, color: "white" }}>{education.degree}</Text>
+                </View>
+              )
+            })}
+          </View>
         </View>
 
         <View
