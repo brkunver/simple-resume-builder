@@ -3,10 +3,10 @@ import type { TResume } from "@/lib/types"
 export const mockResume: TResume = {
   skills: [
     { isShow: true, name: "Javascript" },
-    { isShow: true, name: "Javascript" },
-    { isShow: true, name: "Javascript" },
-    { isShow: true, name: "Javascript" },
-    { isShow: true, name: "Javascript" },
+    { isShow: true, name: "Typescript" },
+    { isShow: true, name: "Frontend & Backend Web Development" },
+    { isShow: true, name: "React.js" },
+    { isShow: true, name: "Zustand state library" },
   ],
   title: "Computer Engineer",
   firstName: "BurakBurak",
@@ -56,7 +56,7 @@ export const mockResume: TResume = {
       endYear: "2026",
       startMonth: "January",
       startYear: "2026",
-      title: "Backend Web Developer",
+      title: "Frontend developer intern",
     },
     {
       isShow: true,
@@ -80,8 +80,8 @@ export const mockResume: TResume = {
     },
   ],
   languages: [
-    { isShow: true, language: "English", level: "A1" },
-    { isShow: true, language: "English", level: "A1" },
-    { isShow: true, language: "English", level: "A1" },
+    { isShow: true, language: "English", level: "B1" },
+    { isShow: true, language: "Spanish", level: "A2" },
+    { isShow: true, language: "German", level: "A1" },
   ],
 }
