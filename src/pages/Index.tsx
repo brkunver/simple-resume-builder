@@ -2,9 +2,8 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import Features from "@/components/Features"
 import image1 from "@/assets/img.svg"
-type Props = {}
 
-function Index({}: Props) {
+function Index() {
   return (
     <motion.main
       className="flex flex-col justify-center px-4 lg:px-0 mx-auto align-middle"

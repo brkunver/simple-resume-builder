@@ -4,9 +4,7 @@ import StepCard from "@/layouts/StepCard"
 import Language from "@/components/Language"
 import { useState } from "react"
 
-type Props = {}
-
-function StepFourPage({}: Props) {
+function StepFourPage() {
   const [languageCount, setLanguageCount] = useState({ first: true, second: false, third: false })
 
   function addNewLanguageHandler() {

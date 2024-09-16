@@ -2,9 +2,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import siteLogo from "@/assets/site-logo.png"
 
-type Props = {}
-
-function Header({}: Props) {
+function Header() {
   return (
     <motion.header className="flex justify-around align-middle text-center font-semibold text-lg w-full h-16 bg-gradient-to-r from-sky-300 to-indigo-600">
       <Link to="/" id="logo" className="my-auto flex align-middle font-bold gap-x-2">

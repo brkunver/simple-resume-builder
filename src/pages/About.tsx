@@ -1,8 +1,7 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-type Props = {}
 
-export default function About({}: Props) {
+export default function About() {
   return (
     <motion.main
       className="flex flex-col mx-auto text-center"
