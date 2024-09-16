@@ -9,8 +9,8 @@ export const mockResume: TResume = {
     { isShow: true, name: "Zustand state library" },
   ],
   title: "Computer Engineer",
-  firstName: "BurakBurak",
-  lastName: "UnverUnver",
+  firstName: "Burakhan",
+  lastName: "Unverunver",
   email: "burakhanunver@gmail.com",
   tel: "9555 555 55 55",
   about:
