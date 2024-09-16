@@ -5,6 +5,7 @@ import ContactSection from "./Components/ContactSection"
 import EducationSection from "./Components/EducationSection"
 import SkillsSection from "./Components/SkillsSection"
 import LanguageSection from "./Components/LanguageSection"
+import BioSection from "./Components/BioSection"
 
 type Props = {
   resume: TResume
@@ -39,8 +40,17 @@ const Pdf1 = ({ resume }: Props) => {
 
         <View
           id="right-section"
-          style={{ flexDirection: "column", flex: 3, backgroundColor: "white", color: "#2c3e50" }}
-        ></View>
+          style={{
+            flexDirection: "column",
+            flex: 3,
+            backgroundColor: "white",
+            color: "#2c3e50",
+            paddingLeft: 10,
+            paddingRight: 10,
+          }}
+        >
+          <BioSection resume={resume} />
+        </View>
       </Page>
     </Document>
   )
