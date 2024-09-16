@@ -1,6 +1,6 @@
 import { Text } from "@react-pdf/renderer"
 import Line from "./Line"
-import { TResume } from "@/lib/types"
+import type { TResume } from "@/lib/types"
 
 function ContactSection({ resume }: { resume: TResume }) {
   return (

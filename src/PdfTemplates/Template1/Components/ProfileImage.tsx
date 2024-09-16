@@ -1,4 +1,4 @@
-import { TResume } from "@/lib/types"
+import type { TResume } from "@/lib/types"
 import { Image } from "@react-pdf/renderer"
 import logo from "@/assets/user.png"
 

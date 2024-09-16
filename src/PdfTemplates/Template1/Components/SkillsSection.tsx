@@ -1,6 +1,6 @@
 import { View, Text } from "@react-pdf/renderer"
 import Line from "./Line"
-import { TResume } from "@/lib/types"
+import type { TResume } from "@/lib/types"
 
 function SkillsSection({ resume }: { resume: TResume }) {
   return (

@@ -1,4 +1,4 @@
-import { TResume } from "@/lib/types"
+import type { TResume } from "@/lib/types"
 import { Text, View } from "@react-pdf/renderer"
 
 function BioSection({ resume }: { resume: TResume }) {
