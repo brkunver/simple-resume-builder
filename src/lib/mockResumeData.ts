@@ -52,6 +52,8 @@ export const mockResume: TResume = {
       isShow: true,
       city: "New york",
       company: "Acme company",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione, eligendi consequuntur sequi quas consectetur ipsam? Dolor vitae odio ad.",
       endMonth: "December",
       endYear: "2026",
       startMonth: "January",
@@ -61,6 +63,8 @@ export const mockResume: TResume = {
     {
       isShow: true,
       city: "New york",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione, eligendi consequuntur sequi quas consectetur ipsam? Dolor vitae odio ad.",
       company: "Acme company",
       endMonth: "December",
       endYear: "2026",
@@ -71,6 +75,8 @@ export const mockResume: TResume = {
     {
       isShow: true,
       city: "New york",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione, eligendi consequuntur sequi quas consectetur ipsam? Dolor vitae odio ad.",
       company: "Acme company",
       endMonth: "December",
       endYear: "2026",
