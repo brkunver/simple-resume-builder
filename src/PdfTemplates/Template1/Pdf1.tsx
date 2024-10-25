@@ -6,6 +6,7 @@ import EducationSection from "./Components/EducationSection"
 import SkillsSection from "./Components/SkillsSection"
 import LanguageSection from "./Components/LanguageSection"
 import BioSection from "./Components/BioSection"
+import ExperienceSection from "./Components/ExperienceSection"
 
 type Props = {
   resume: TResume
@@ -50,6 +51,7 @@ const Pdf1 = ({ resume }: Props) => {
           }}
         >
           <BioSection resume={resume} />
+          <ExperienceSection resume={resume} />
         </View>
       </Page>
     </Document>
