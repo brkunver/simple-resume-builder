@@ -2,12 +2,12 @@ import resumeStore from "@/store"
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer"
 import Pdf1 from "@/PdfTemplates/Template1/Pdf1"
 import { Link } from "react-router-dom"
-import { mockResume } from "@/lib/mockResumeData"
+//import { mockResume } from "@/lib/mockResumeData"
 import { PDFTemplate } from "@/lib/types"
 
 function PdfResult() {
-  const { selectedTemplate } = resumeStore()
-  const tempResume = mockResume
+  const { selectedTemplate, resume } = resumeStore()
+  const tempResume = resume
 
   let document = <Pdf1 resume={tempResume}></Pdf1>
 
