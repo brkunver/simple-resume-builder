@@ -17,7 +17,7 @@ function Index() {
           <h2 className="text-2xl font-bold text-center">Create Beautiful Resumes - <span className="italic underline text-purple-900">Currently In Development Mode</span></h2>
           <p className="text-lg font-semibold text-gray-800">
             Create your professional resume in minutes! Our free platform allows you to easily input your information
-            and download your CV as a{" "}
+            and download your CV as a
             <span className="bg-gradient-to-r font-bold from-blue-600 to-indigo-600 inline-block text-transparent bg-clip-text">
               PDF
             </span>
