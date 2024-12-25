@@ -33,7 +33,7 @@ export const mockResume: TResume = {
       endMonth: "June",
       endYear: "2025",
       schoolName: "New york state university",
-      startMonth: "July",
+      startMonth: "June",
       startYear: "2021",
     },
     {
